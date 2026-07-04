@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R Bhanu Prakash | Official Homepage</title>
+  <meta name="description" content="Official homepage of R Bhanu Prakash — tech student building a connected digital identity ahead of engineering college." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b0f17" />
+  <link rel="canonical" href="https://rbhanuprakash.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="R Bhanu Prakash | Official Homepage" />
+  <meta property="og:description" content="Official homepage of R Bhanu Prakash — tech student building a connected digital identity ahead of engineering college." />
+  <meta property="og:url" content="https://rbhanuprakash.vercel.app/" />
+
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --panel: rgba(17, 24, 39, 0.86);
+      --panel-2: rgba(17, 24, 39, 0.68);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --line: rgba(255, 255, 255, 0.08);
+      --accent: #60a5fa;
+      --accent-2: #7c3aed;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(96, 165, 250, 0.15), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.12), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      box-shadow: 0 14px 30px rgba(96, 165, 250, 0.18);
+      flex: 0 0 auto;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 760px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(96, 165, 250, 0.22);
+      background: rgba(96, 165, 250, 0.10);
+      color: #dbeafe;
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .about { grid-column: span 7; }
+    .status { grid-column: span 5; }
+    .links { grid-column: span 12; }
+
+    @media (max-width: 780px) {
+      .about, .status, .links { grid-column: span 12; }
+      .hero { padding: 22px; }
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      color: #f3f4f6;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .links-grid { grid-template-columns: 1fr; }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid #30363d;
+      background: #111827;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(96, 165, 250, 0.45);
+      background: #162033;
+    }
+
+    .btn small {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-top: 18px;
+      padding: 0 8px;
+    }
+
+    .accent {
+      color: #bfdbfe;
+    }
+
+    .tiny {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "R Bhanu Prakash",
+    "url": "https://rbhanuprakash.vercel.app/",
+    "jobTitle": "Tech Student",
+    "description": "Official digital identity page for R Bhanu Prakash.",
+    "sameAs": [
+      "https://x.com/rbhanu_prakash",
+      "https://www.linkedin.com/in/rbhanuprakash/",
+      "https://github.com/rbhanu-prakash",
+      "https://huggingface.co/rbhanuprakash",
+      "https://www.producthunt.com/@rbhanuprakash",
+      "https://www.reddit.com/user/rbhanuprakash/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero" aria-label="Official homepage of R Bhanu Prakash">
+      <div class="top">
+        <div class="avatar" aria-hidden="true">RB</div>
+        <div class="title-block">
+          <h1>R Bhanu Prakash</h1>
+          <p class="subtitle">
+            Tech student building a clean, connected digital identity ahead of engineering college.
+            This page is my official name hub.
+          </p>
+        </div>
+      </div>
+
+      <div class="badges" aria-label="Profile highlights">
+        <span class="pill">B.E. Engineering Class of 2031</span>
+        <span class="pill">Digital Identity</span>
+        <span class="pill">Tech & AI Focus</span>
+      </div>
+
+      <div class="grid">
+        <article class="card about">
+          <h2>About</h2>
+          <p>
+            I am R Bhanu Prakash, preparing for my engineering journey and building a strong public
+            presence around my real name.
+          </p>
+          <p class="tiny">
+            Goal: make searches for my name lead directly to me.
+          </p>
+        </article>
+
+        <article class="card status">
+          <h2>Current Focus</h2>
+          <p>
+            Learning technology, creating a professional footprint, and connecting my public profiles
+            under one official homepage.
+          </p>
+          <p class="tiny">
+            This page is designed to be simple, fast, and easy for search engines to understand.
+          </p>
+        </article>
+
+        <section class="card links" aria-label="Official profiles">
+          <h2>Official Profiles</h2>
+          <div class="links-grid">
+            <a class="btn" href="https://x.com/rbhanu_prakash" target="_blank" rel="noopener noreferrer">
+              <span>X / Twitter</span>
+              <small>@rbhanu_prakash</small>
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/rbhanuprakash/" target="_blank" rel="noopener noreferrer">
+              <span>LinkedIn</span>
+              <small>/in/rbhanuprakash</small>
+            </a>
+            <a class="btn" href="https://github.com/rbhanu-prakash" target="_blank" rel="noopener noreferrer">
+              <span>GitHub</span>
+              <small>@rbhanu-prakash</small>
+            </a>
+            <a class="btn" href="https://huggingface.co/rbhanuprakash" target="_blank" rel="noopener noreferrer">
+              <span>Hugging Face</span>
+              <small>@rbhanuprakash</small>
+            </a>
+            <a class="btn" href="https://www.producthunt.com/@rbhanuprakash" target="_blank" rel="noopener noreferrer">
+              <span>Product Hunt</span>
+              <small>@rbhanuprakash</small>
+            </a>
+            <a class="btn" href="https://www.reddit.com/user/rbhanuprakash/" target="_blank" rel="noopener noreferrer">
+              <span>Reddit</span>
+              <small>@rbhanuprakash</small>
+            </a>
+          </div>
+          <p class="tiny">
+            Add more public links later as your footprint grows.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> R Bhanu Prakash. All rights reserved.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
